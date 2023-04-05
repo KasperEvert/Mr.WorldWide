@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mr. WorldWide Arabic</title>
+    <link href="..\..\materialize\css\materialize.css" rel="stylesheet">
+    <link href="..\..\css\Master.css" rel="stylesheet">
+    <link href="..\..\css\Fonts.css" rel="stylesheet">
+    <link rel="icon" type="image/icon" href="https://KasperEvert.github.io/Mr.WorldWide/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="LANGNAME"><ara>العربية</ara> - Arabic</div>
+    <script src="..\..\materialize\js\materialize.js"></script>
+    <script src="..\..\scripts\navbar.js"></script>
+    <header id="mainHead"></header>
+
+    <h1 class="mainTitle">Arabic Alphabet<br>(<tara>الْأَبْجَدِيَّة الْعَرَبِيَّة‎</tara> - al-abjadīyah lʿarabīyah)</h1>
+
+    <div class="siteContent">
+        <h3 style="color: red;">!<araalt>مهم</araalt> - Important!</h3>
+        <p>
+          Here you have some diffrent calligraphy to choose from:
+        </p>
+        <div class="collection" id="langOptions">
+          <a href="javascript:toNormal()" id="collection_nor" class="collection-item active red lighten-1">Normal</a>
+          <a href="javascript:toThu()" id="collection_thu" class="collection-item red-text text-lighten-1">Thuluth</a>
+          <a href="javascript:toNat()" id="collection_nat" class="collection-item red-text text-lighten-1">Nastaʿlīq</a>
+          <a class="collection-item grey-text"> <br>Somewhat helpfull tools:<br><br> </a>
+          <a href="https://KasperEvert.github.io/Mr.WorldWide/games/semitic_transliteration_table.html" class="collection-item red-text text-lighten-1">Convert Between Semitic Scripts</a>
+          <a href="https://KasperEvert.github.io/Mr.WorldWide/games/semitize.html" class="collection-item red-text text-lighten-1">Tool for Making Text Look Semitic</a>
+        </div><br>
+
+        <h3>Is it a difficult script to learn?</h3>
+        <p>
+          There are some diffrences between for example english & european
+          alphabets and the Arabic alphabet that will make it hard to learn.
+          For example, vowles aren't used in the same way in Arabic as in English.
+          However, if you already speak Arabic or if you already know some other
+          semitic script it shouldn't be too hard.
+        </p>
+        <div id="1kbtn_area"><a href="1000words.html" id="1kbtn" class="waves-effect waves-light btn red darken-1">Practice 1k most common words</a></div>
+        <h3>What does <arathu>الْأَبْجَدِيَّة</arathu> - al-abjadīyah mean?</h3>
+        <p>
+          It comes from the order of the letters in the alphabet.
+          Just like how the English word "alphabet" comes from the
+          first two letters of the Greek alphabet, Alpha and Beta,
+          the Arabic Abjad comes from the first four letters of the
+          alphabet. Specifically the letters: ʾalif, bāʾ, jīm & dāl which
+          depending on order comes first. When read as a word
+           the entire alphabet reads as such:<br>
+          ʾabjad hawwaz ḥuṭṭī kalaman saʿfaṣ qarashat thakhadh ḍaẓagh
+        </p>
+        <h3><arathu>الْأَبْجَدِيَّة</arathu>, The alphabet</h3>
+        <p><i>Footnote: ∅ refers to not being not being written in the tranliteration column and
+          not being pronounced when it comes to IPA column.</i></p>
+        <table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Trans</th>
+              <th>IPA</th>
+              <th>Final</th>
+              <th>Medial</th>
+              <th>Initial</th>
+              <th>Isolated</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+      			<td><araalt>أَلِف</araalt> - ʾalif</td>
+      			<td>ā / â, ʾ</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Open_front_unrounded_vowel" title="Open front unrounded vowel">aː</a>], ∅</td>
+      			<td style="text-align: right;" class="araalt">ـا</td>
+      			<td></td>
+      			<td style="text-align: right;" class="araalt">ا</td>
+      			<td></td>
+      		</tr>
+      		<tr>
+      			<td><araalt>بَاء</araalt> - bāʾ</td>
+      			<td>b</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive" title="Voiced bilabial plosive">b</a>]</td>
+      			<td class="araalt">ـب</td>
+      			<td class="araalt">ـبـ</td>
+      			<td class="araalt">بـ</td>
+      			<td class="araalt">ب</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>تَاء</araalt> - tāʾ</td>
+      			<td>t</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_plosives" title="Voiceless dental and alveolar plosives">t</a>]</td>
+      			<td class="araalt">ـت</td>
+      			<td class="araalt">ـتـ</td>
+      			<td class="araalt">تـ</td>
+      			<td class="araalt">ت</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>ثَاء</araalt> - thāʾ</td>
+      			<td>th / ṯ</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_dental_fricative" title="Voiceless dental fricative">θ</a>]</td>
+      			<td class="araalt">ـث</td>
+      			<td class="araalt">ـثـ</td>
+      			<td class="araalt">ثـ</td>
+      			<td class="araalt">ث</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>جِيم</araalt> - jīm</td>
+      			<td>j / ǧ</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_postalveolar_affricate" title="Voiced postalveolar affricate">d͡ʒ</a>]</td>
+      			<td class="araalt">ـج</td>
+      			<td class="araalt">ـجـ</td>
+      			<td class="araalt">جـ</td>
+      			<td class="araalt">ج</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>حَاء</araalt> - ḥāʾ</td>
+      			<td>ḥ / ḩ</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_pharyngeal_fricative" title="Voiceless pharyngeal fricative">ħ</a>]</td>
+      			<td class="araalt">ـح</td>
+      			<td class="araalt">ـحـ</td>
+      			<td class="araalt">حـ</td>
+      			<td class="araalt">ح</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>خَاء</araalt> - khāʾ</td>
+      			<td>kh / ḫ, ḵ, ẖ</td>
+      			<td>[<a class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_uvular_fricative" title="Voiceless uvular fricative">χ</a>, <a class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_velar_fricative" title="Voiceless velar fricative">x</a>]</td>
+      			<td class="araalt">ـخ</td>
+      			<td class="araalt">ـخـ</td>
+      			<td class="araalt">خـ</td>
+      			<td class="araalt">خ</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>دَال</araalt> - dāl</td>
+      			<td>d</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_dental_and_alveolar_plosives" title="Voiced dental and alveolar plosives">d</a>]</td>
+      			<td style="text-align: right;" class="araalt">ـد</td>
+      			<td></td>
+      			<td style="text-align: right;" class="araalt">د</td>
+      			<td></td>
+      		</tr>
+      		<tr>
+      			<td><araalt>ذَال</araalt> - dhāl</td>
+      			<td>dh / ḏ</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_dental_fricative" title="Voiced dental fricative">ð</a>]</td>
+      			<td style="text-align: right;" class="araalt">ـذ</td>
+      			<td></td>
+      			<td style="text-align: right;" class="araalt">ذ</td>
+      			<td></td>
+      		</tr>
+      		<tr>
+      			<td><araalt>رَاء</araalt> - rāʾ</td>
+      			<td>r</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_trills#Voiced_alveolar_trill" title="Voiced alveolar trill">r</a>]</td>
+      			<td style="text-align: right;" class="araalt">ـر</td>
+      			<td></td>
+      			<td style="text-align: right;" class="araalt">ر</td>
+      			<td></td>
+      		</tr>
+      		<tr>
+      			<td><araalt>زَاي</araalt> - zayn</td>
+      			<td>z</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_alveolar_fricative#Voiced_alveolar_sibilant" title="Voiced alveolar sibilant">z</a>]</td>
+      			<td style="text-align: right;" class="araalt">ـز</td>
+      			<td></td>
+      			<td style="text-align: right;" class="araalt">ز</td>
+      			<td></td>
+      		</tr>
+      		<tr>
+      			<td><araalt>سِين</araalt> - sīn</td>
+      			<td>s</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_alveolar_fricative#Voiceless_alveolar_sibilants" title="Voiceless alveolar sibilants">s</a>]</td>
+      			<td class="araalt">ـس</td>
+      			<td class="araalt">ـسـ</td>
+      			<td class="araalt">سـ</td>
+      			<td class="araalt">س</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>شِين</araalt> - shīn</td>
+      			<td>sh / š </td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_postalveolar_fricative#Voiceless_palato-alveolar_fricative" title="Voiceless palato-alveolar fricative">ʃ</a>]</td>
+      			<td style="text-align: right;" class="araalt">ـش</td>
+      			<td></td>
+      			<td style="text-align: right;" class="araalt">ـشـ</td>
+      			<td></td>
+      		</tr>
+      		<tr>
+      			<td><araalt>صَاد</araalt> - ṣād</td>
+      			<td>ṣ / ş </td>
+                <td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_alveolar_fricative#Voiceless_alveolar_sibilants" title="Voiceless alveolar sibilants">s</a><a target="_blank" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ˤ</a>]</td>
+      			<td class="araalt">ـص</td>
+      			<td class="araalt">ـصـ</td>
+      			<td class="araalt">صـ</td>
+      			<td class="araalt">ص</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>ضَاد</araalt> - ḍād</td>
+      			<td>ḍ / ḑ </td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_dental_and_alveolar_plosives" title="Voiced dental and alveolar plosives">d</a><a target="_blank" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ˤ</a>]</td>
+      			<td class="araalt">ـض</td>
+      			<td class="araalt">ـضـ</td>
+      			<td class="araalt">ضـ</td>
+      			<td class="araalt">ض</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>طَاء</araalt> - ṭāʾ</td>
+      			<td>ṭ / ţ </td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_plosives" title="Voiceless dental and alveolar plosives">t</a><a target="_blank" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ˤ</a>]</td>
+      			<td class="araalt">ـط</td>
+      			<td class="araalt">ـطـ</td>
+      			<td class="araalt">طـ</td>
+      			<td class="araalt">ط</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>ظَاء</araalt> - ẓāʾ</td>
+      			<td>ẓ / z̧ </td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_dental_fricative" title="Voiced dental fricative">ð</a><a target="_blank" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ˤ</a>]</td>
+      			<td class="araalt">ـظ</td>
+      			<td class="araalt">ـظـ</td>
+      			<td class="araalt">ظـ</td>
+      			<td class="araalt">ظ</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>عَيْن</araalt> - ʿayn</td>
+      			<td>ʿ</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ʕ</a>]</td>
+      			<td class="araalt">ـع</td>
+      			<td class="araalt">ـعـ</td>
+      			<td class="araalt">عـ</td>
+      			<td class="araalt">ع</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>غَيْن</araalt> - ghayn</td>
+      			<td>gh / ġ, ḡ </td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_velar_fricative" title="Voiced velar fricative">ɣ</a>]</td>
+      			<td class="araalt">ـغ</td>
+      			<td class="araalt">ـغـ</td>
+      			<td class="araalt">غـ</td>
+      			<td class="araalt">غ</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>فَاء</araalt> - fāʾ</td>
+      			<td>f</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_labiodental_fricative" title="Voiceless labiodental fricative">f</a>]</td>
+      			<td class="araalt">ـف</td>
+      			<td class="araalt">ـفـ</td>
+      			<td class="araalt">فـ</td>
+      			<td class="araalt">ف</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>قَاف</araalt> - qāf</td>
+      			<td>q</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_uvular_plosive" title="Voiceless uvular plosive">q</a>]</td>
+      			<td class="araalt">ـق</td>
+      			<td class="araalt">ـقـ</td>
+      			<td class="araalt">قـ</td>
+      			<td class="araalt">ق</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>كَاف</araalt> - kāf</td>
+      			<td>k</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_velar_plosive" title="Voiceless velar plosive">k</a>]</td>
+      			<td class="araalt">ـك</td>
+      			<td class="araalt">ـكـ</td>
+      			<td class="araalt">كـ</td>
+      			<td class="araalt">ك</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>لاَم</araalt> - lām</td>
+      			<td>l</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_lateral_approximants#Voiced_alveolar_lateral_approximant" title="Voiced alveolar lateral approximant">l</a>]</td>
+      			<td class="araalt">ـل</td>
+      			<td class="araalt">ـلـ</td>
+      			<td class="araalt">لـ</td>
+      			<td class="araalt">ل</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>مِيم</araalt> - mīm</td>
+      			<td>m</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_bilabial_nasal" title="Voiced bilabial nasal">m</a>]</td>
+      			<td class="araalt">ـم</td>
+      			<td class="araalt">ـمـ</td>
+      			<td class="araalt">مـ</td>
+      			<td class="araalt">م</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>نُون</araalt> - nūn</td>
+      			<td>n</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_nasals" title="Voiced dental, alveolar and postalveolar nasals">n</a>]</td>
+      			<td class="araalt">ـن</td>
+      			<td class="araalt">ـنـ</td>
+      			<td class="araalt">نـ</td>
+      			<td class="araalt">ن</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>هَاء</araalt> - hāʾ</td>
+      			<td>h</td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_glottal_fricative" title="Voiceless glottal fricative">h</a>]</td>
+      			<td class="araalt">ـه</td>
+      			<td class="araalt">ـهـ</td>
+      			<td class="araalt">هـ</td>
+      			<td class="araalt">ه</td>
+      		</tr>
+      		<tr>
+      			<td><araalt>وَاو</araalt> - wāw</td>
+      			<td>w / ū / ∅ </td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_labial–velar_approximant" title="Voiced labial–velar approximant">w</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/Close_back_rounded_vowel" title="Close back rounded vowel">uː</a>], ∅</td>
+      			<td style="text-align: right;" class="araalt">ـو</td>
+      			<td></td>
+      			<td style="text-align: right;" class="araalt">و</td>
+      			<td></td>
+      		</tr>
+      		<tr>
+      			<td><araalt>يَاء</araalt> - yāʾ</td>
+      			<td>y / ī </td>
+      			<td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiced_palatal_approximant" title="Voiced palatal approximant">j</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/Close_front_unrounded_vowel" title="Close front unrounded vowel">iː</a>]</td>
+      			<td class="araalt">ـي</td>
+      			<td class="araalt">ـيـ</td>
+      			<td class="araalt">يـ</td>
+      			<td class="araalt">ي</td>
+      		</tr>
+        </tbody>
+      </table>
+      <h4><tara>أحرف خاصة<tara> - Special Characters</h4>
+      <table>
+          <tr>
+            <th>Name</th>
+            <th>Trans</th>
+            <th>IPA</th>
+            <th>Final</th>
+            <th>Medial</th>
+            <th>Initial</th>
+            <th>Isolated</th>
+          </tr>
+          <tbody>
+            <tr>
+                <td><araalt>همزة‎</araalt> - hamzah</td>
+                <td>ʿ</td>
+                <td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Glottal_stop" title="Glottal stop">ʔ</a>]</td>
+                <td></td>
+                <td style="text-align: right;" class="araalt">ء</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><araalt>تَاءْ مَرْبُوطَة</araalt> - tāʾ marbūṭah</td>
+                <td>h / t</td>
+                <td>[<a target="_blank" class="ipa" href="https://en.wikipedia.org/wiki/Voiceless_glottal_fricative" title="Voiceless glottal fricative">h</a>, <a target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_plosives" title="Voiceless dental and alveolar plosives">t</a>]</td>
+                <td style="text-align: right;" class="araalt">ـة</td>
+                <td></td>
+                <td style="text-align: right;" class="araalt">ة</td>
+                <td></td>
+            </tr>
+            <tr>
+        			<td><araalt>لاَم + أَلِف</araalt> - lām + ʾalif</td>
+        			<td>lā</td>
+        			<td>[<a class="ipa" href="https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_lateral_approximants#Voiced_alveolar_lateral_approximant" title="Voiced alveolar lateral approximant">l</a><a class="ipa" href="https://en.wikipedia.org/wiki/Open_front_unrounded_vowel" title="Open front unrounded vowel">aː</a>]</td>
+        			<td style="text-align: right;" class="araalt">ـلا</td>
+        			<td></td>
+        			<td style="text-align: right;" class="araalt">لا</td>
+        			<td></td>
+        		</tr>
+          </tbody>
+      </table>
+      <h4><tara>حَرَكَات</tara> - Diacritics</h4>
+      <table>
+          <thead>
+              <th><tara>حَرَكَة</tara></th>
+              <th>Sound</th>
+              <th>Example</th>
+              <th>Ex. Sound</th>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="araalt">َ</td>
+                  <td>a</td>
+                  <td class="araalt">بَ</td>
+                  <td>Ba</td>
+              </tr>
+              <tr>
+                  <td class="araalt">ِ</td>
+                  <td>ī / ee</td>
+                  <td class="araalt">بِ</td>
+                  <td>Bī</td>
+              </tr>
+              <tr>
+                  <td class="araalt">ُ</td>
+                  <td>o</td>
+                  <td class="araalt">بُ</td>
+                  <td>Bo</td>
+              </tr>
+              <tr>
+                  <td class="araalt">ّ</td>
+                  <td>Long</td>
+                  <td class="araalt">رّ</td>
+                  <td>Rr</td>
+              </tr>
+              <tr>
+                  <td class="araalt">ْ</td>
+                  <td>Next no Vowel <br>or diphthong</td>
+                  <td class="araalt">ْر</td>
+                  <td></td>
+              </tr>
+          </tbody>
+      </table>
+      <h4><tara>أَرْقَام هِنْدِيَّة</tara> - Oriental Arabic–Hindu Numerals</h4>
+      <p><i>Note: Arab numerals are written from left to right, but if you have a
+      collection of oriental arab numerals you start from the right and go left
+      (just like you read arabic text),
+        but each numeral cluster is read from left to right (just like western arabic numerals).
+        An example is given with the number "10" on each line.</i></p>
+      <table>
+          <thead>
+              <th>Western</th><th>0</th><th>1</th><th>2</th><th>3</th><th>4</th>
+              <th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><b>Arab</b></td>
+                  <td class="araalt">٠</td><td class="araalt">١</td><td class="araalt">٢</td>
+                  <td class="araalt">٣</td><td class="araalt">٤</td><td class="araalt">٥</td>
+                  <td class="araalt">٦</td><td class="araalt">٧</td><td class="araalt">٨</td>
+                  <td class="araalt">٩</td><td class="araalt">١٠</td>
+              </tr>
+              <tr>
+                  <td><b>Persian</b></td>
+                  <td class="araalt">۰</td><td class="araalt">۱</td><td class="araalt">۲</td>
+                  <td class="araalt">۳</td><td class="araalt">۴</td><td class="araalt">۵</td>
+                  <td class="araalt">۶</td><td class="araalt">۷</td><td class="araalt">٨</td>
+                  <td class="araalt">٩</td><td class="araalt">۱۰</td>
+              </tr>
+          </tbody>
+      </table>
+        <br>
+        <h3>Example1: <arathu>ٱلشَّهَادَةُ</arathu> - Aš-Šahādah </h3>
+        <p>
+            The Shahadah - The Islamic oath - is an important phrase according to
+            probably most Arabic speakers, and it looks like this: </p>
+            <h4 style="text-align: right;"><ara>.أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ ٱللَّٰهِ</ara></h4>
+        <p>
+            It can be transliterated as such: ašhadu ʾalā ʾilāha ʾilla -llāhu, wa-ʾašhadu ʾanna muḥammadan rasūlu -llāh.
+            And can roughly be translated as: I bear witness that there is no deity but God, and I bear witness that Muhammad is his messenger.
+            This phrase can be found on flags like the Saudi Arabian flag and the Taliban Afghanistan flag.
+        </p>
+        <h4 style="text-align: right;">Nastaʿlīq: <tara>أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ ٱللَّٰهِ</tara></h4>
+        <h4 style="text-align: right;">Thuluth: <arathu>أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا ٱللَّٰهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ ٱللَّٰهِ</arathu></h4>
+        <br>
+        <h3>Example2: <arathu>تَكْبِير</arathu> - The Takbir</h3>
+        <p>
+            The Takbir is a phrase that is used by Arabic speaking monotheist, for the most part
+            Christians and Muslims. Takbir means magnification [of God]. The phrase can for example
+            be found on the flag of Iraq. The phrase is as such:
+        </p>
+        <h4 style="text-align: right;"><ara>ٱللَّٰهُ أَكْبَرُ</ara></h4>
+        <p>
+            The phrase transliterats as ʾAllāhu ʾakbar, and means "[The] God is the greatest".
+        </p>
+        <h4 style="text-align: right;">Nastaʿlīq: <tara>ٱللَّٰهُ أَكْبَرُ</tara></h4>
+        <h4 style="text-align: right;">Thuluth: <arathu>ٱللَّٰهُ أَكْبَرُ</arathu></h4>
+        <br>
+        <h3>The keyboard layout</h3>
+        <p>In case you need to learn the keyboard layout, <a target="_blank" href="https://en.wikipedia.org/wiki/Arabic_keyboard">here</a> is a good picture.
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/KB_Arabic_MAC.svg/800px-KB_Arabic_MAC.svg.png">
+          <img class="invert_on_nightmode" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/KB_Arabic_MAC.svg/800px-KB_Arabic_MAC.svg.png" alt="(There should be a picture here of the keyboard layout of an arabic keyboard)">
+        </a>
+        </p>
+        <div id="altCss"></div>
+        <script type="text/javascript">
+          let active_classes = "collection-item active red lighten-1";
+          let inactive_classes = "collection-item red-text text-lighten-1";
+          function toNormal() {
+            document.getElementById("altCss").innerHTML = `<style media="screen">
+              araalt {
+                font-family: farabic;
+              }
+              .araalt {
+                font-family: farabic;
+              }
+            </style>`;
+            document.getElementById("collection_nor").className  = active_classes;
+            document.getElementById("collection_thu").className  = inactive_classes;
+            document.getElementById("collection_nat").className  = inactive_classes;
+          }
+          function toThu() {
+            document.getElementById("altCss").innerHTML = `<style media="screen">
+              araalt {
+                font-family: arabicThu;
+              }
+              .araalt {
+                font-family: arabicThu;
+              }
+            </style>`;
+            document.getElementById("collection_nor").className  = inactive_classes;
+            document.getElementById("collection_thu").className  = active_classes;
+            document.getElementById("collection_nat").className  = inactive_classes;
+          }
+          function toNat() {
+            document.getElementById("altCss").innerHTML = `<style media="screen">
+              araalt {
+                font-family: tarabic;
+              }
+              .araalt {
+                font-family: tarabic;
+              }
+            </style>`;
+            document.getElementById("collection_nor").className  = inactive_classes;
+            document.getElementById("collection_thu").className  = inactive_classes;
+            document.getElementById("collection_nat").className  = active_classes;
+          }
+          document.addEventListener('DOMContentLoaded', toNormal());
+        </script>
+        <div id="nightmode"></div>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+/*
+ * CSS File for site redesign
+ */
+
+@font-face {
+  font-family: 'emoji';
+  src: url('../materialize/fonts/NotoColorEmoji.ttf');
+}
+.emo {
+  font-family: emoji;
+}
+emo {
+  font-family: emoji;
+}
+
+body {
+  background-color: white;
+}
+.siteContent {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 1%;
+  font-size: 18px;
+}
+h2, h3, h4, h5 {
+  color: #ee6e73;
+}
+h1, h4 {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+p {
+  text-align: left;
+}
+.collection {
+  font-size: 18px;
+}
+nav {
+  padding-right: 1%;
+}
+
+.ra {/*ra= Right Align*/
+  text-align: right;
+}
+
+.mainTitle { padding-left:3%;padding-right:3%;padding-bottom: 30px; }
+#LANGNAME { display: none; }
+.constant { display: none; }
+#menu {
+}
+#menu a {
+  color: black;
+  font-size: 52px;
+}
+
+.wordGuessBtn {
+    font-size: 28px;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .siteContent {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 2.2em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  h4 {
+    font-size: 1.8em;
+  }
+  p {
+    line-height: 26px;   /* within paragraph */
+    margin-bottom: 30px; /* between paragraphs */
+    margin-top: 30px; /* between paragraphs */
+  }
+  .collection {
+    font-size: 18px;
+  }
+  #menu a {
+    font-size: 24px;
+  }
+}

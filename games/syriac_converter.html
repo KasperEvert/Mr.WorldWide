@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mr. WorldWide Syriac</title>
+    <link href="..\materialize\css\materialize.css" rel="stylesheet">
+    <link href="..\css\Master.css" rel="stylesheet">
+    <link rel="icon" type="image/icon" href="https://KasperEvert.github.io/Mr.WorldWide/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="..\css\syriacFonts.css" rel="stylesheet">
+    <style media="screen">
+      textarea {
+        font-size: 24px !important;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="LANGNAME">Syriac script converter</div>
+    <script src="..\materialize\js\materialize.js"></script>
+    <script src="..\scripts\navbar.js"></script>
+    <header id="mainHead"></header>
+
+    <h1 class="mainTitle">Convert between Estrangela, Serto and Eastern Syriac script.</h1>
+    <div class="siteContent">
+    <textarea id="input1" class="materialize-textarea">ܓܘܫܡܐ ، ܓܫܘܡ</textarea>
+    <br><br>
+    <h3>Select Script</h3>
+      <div class="collection">
+        <a href="javascript:toEstrangela()" id="collection_est" class="collection-item active red lighten-1">Estrangela Script</a>
+        <a href="javascript:toSerto()" id="collection_ser" class="collection-item red-text text-lighten-1">Western Serto Script</a>
+        <a href="javascript:toEastern()" id="collection_eas" class="collection-item red-text text-lighten-1">Eastern Syriac Script</a>
+      </div><br>
+    </div>
+    <div id="altCss"></div>
+    <script type="text/javascript">
+      let active_classes = "collection-item active red lighten-1";
+      let inactive_classes = "collection-item red-text text-lighten-1";
+      function toEstrangela() {
+        document.getElementById("altCss").innerHTML = `<style media="screen">
+          #input1 {
+            font-family: Estrangela;
+          }
+        </style>`;
+        document.getElementById("collection_est").className  = active_classes;
+        document.getElementById("collection_ser").className  = inactive_classes;
+        document.getElementById("collection_eas").className  = inactive_classes;
+      }
+      function toSerto() {
+        document.getElementById("altCss").innerHTML = `<style media="screen">
+          #input1 {
+            font-family: Serto;
+          }
+        </style>`;
+        document.getElementById("collection_est").className  = inactive_classes;
+        document.getElementById("collection_ser").className  = active_classes;
+        document.getElementById("collection_eas").className  = inactive_classes;
+      }
+      function toEastern() {
+        document.getElementById("altCss").innerHTML = `<style media="screen">
+          #input1 {
+            font-family: Eastern;
+          }
+        </style>`;
+        document.getElementById("collection_est").className  = inactive_classes;
+        document.getElementById("collection_ser").className  = inactive_classes;
+        document.getElementById("collection_eas").className  = active_classes;
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems, {});
+        toEstrangela();
+      });
+    </script>
+    <div id="nightmode"></div>
+  </body>
+</html>

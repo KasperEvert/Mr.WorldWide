@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mr. WorldWide Semitize</title>
+    <link href="..\materialize\css\materialize.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="..\css\Master.css" rel="stylesheet">
+    <link rel="icon" type="image/icon" href="https://KasperEvert.github.io/Mr.WorldWide/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="LANGNAME">Semitize</div>
+    <script src="..\materialize\js\materialize.js"></script>
+    <script src="..\scripts\navbar.js"></script>
+    <header id="mainHead"></header>
+
+    <h1 class="mainTitle">
+      Semitize - Reading roman alphabet text like it's a Semitic language!
+      <a href="javascript:explain()" style="color: red;">[?]</a>
+    </h1>
+    <br>
+    <div class="siteContent">
+    <p id="exp">
+
+    </p>
+    <textarea name="input1" id="input1" class="materialize-textarea">Enter text here...</textarea>
+    <button class="btn waves-effect waves-light" onclick="mainClick()" name="action">Semitize
+      <i class="material-icons right">send</i>
+    </button></div>
+  <script type="text/javascript">
+    function mainClick() {
+      let txt = document.getElementById('input1').value;
+      document.getElementById('input1').value = txt.replace(/[aeiou]/igm, "");
+    }
+    let isExplainClicked = false;
+    function explain() {
+      if (isExplainClicked) {
+        document.getElementById('exp').innerHTML = "";
+      }
+      else {
+        document.getElementById('exp').innerHTML = "In the Semitic language family, writingsystems like the Hebrew, Aramaic, Syriac, Arabic or related writingsystems are usually used. These writingsystems don't handle vowels in the same way for example the Roman does. This reflects the over all language, since the Semitic languages have much more predictable vowel patterns than for example English so writing English in these writingsystems would not be a good idea, and this site is my way of proving that. on this website you can write something in for example English or Italian and have it remove all vowels (I ought to note here that the semitic writingsystems do in fact have vowel-characters, it's just that they aren't always written, so this is a bit of an overexaggerated site) and then you can try to read it without vowels. It's possible but hard to do so!<br><br>";
+      }
+      isExplainClicked = !isExplainClicked;
+    }
+  </script>
+  <div id="nightmode"></div>
+  </body>
+</html>

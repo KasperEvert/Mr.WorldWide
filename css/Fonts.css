@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'farmenian';
+  src: url('../materialize/fonts/NotoSansArmenian.ttf');
+}
+.arm {
+  font-family: farmenian;
+}
+arm {
+  font-family: farmenian;
+}
+@font-face {
+  font-family: 'farabic';
+  src: url('../materialize/fonts/NotoSansArabic.ttf');
+}
+@font-face {
+  font-family: 'tarabic';
+  src: url('../materialize/fonts/NotoArabic-Nastaliq.ttf');
+}
+@font-face {
+  font-family: 'arabicThu';
+  src: url('../materialize/fonts/Arabic-Thuluth.ttf');
+}
+.ara {
+  font-family: farabic;
+}
+ara {
+  font-family: farabic;
+}
+tara {
+  font-family: tarabic;
+}
+arathu {
+    font-family: arabicThu;
+}
+@font-face {
+  font-family: 'fsanskrit';
+  src: url('../materialize/fonts/NotoSansDevanagari.ttf');
+}
+@font-face {
+  font-family: 'fsanskritsbold';
+  src: url('../materialize/fonts/NotoSansDevanagari-SemiBold.ttf');
+}
+.san {
+  font-family: fsanskritsbold;
+}
+san {
+  font-family: fsanskrit;
+}
+@font-face {
+  font-family: 'fbra';
+  src: url('../materialize/fonts/NotoSansBrahmi.ttf');
+}
+.bra {
+  font-family: fbra;
+}
+@font-face {
+  font-family: 'fhebrew';
+  src: url('../materialize/fonts/NotoSansHebrew.ttf');
+}
+@font-face {
+    font-family: 'fhebserif';
+    src: url('../materialize/fonts/NotoSerifHebrew.ttf');
+}
+@font-face {
+    font-family: 'fhebhand';
+    src: url('../materialize/fonts/NotoRashiHebrew.ttf');
+}
+.heb {
+  font-family: fhebrew;
+}
+heb {
+  font-family: fhebrew;
+}
+.hebserf {
+  font-family: fhebserif;
+}
+hebserf {
+  font-family: fhebserif;
+}
+.hebhand {
+  font-family: fhebhand;
+}
+hebhand {
+  font-family: fhebhand;
+}
+@font-face {
+  font-family: 'faramaic';
+  src: url('../materialize/fonts/NotoSansImperialAramaic.ttf');
+}
+.aram {
+  font-family: faramaic;
+}
+aram {
+  font-family: faramaic;
+}
+@font-face {
+  font-family: 'fgeez';
+  src: url('../materialize/fonts/NotoSerifEthiopic.ttf');
+}
+.gez {
+  font-family: fgeez;
+}
+gez {
+  font-family: fgeez;
+}
+@font-face {
+  font-family: 'frune';
+  src: url('../materialize/fonts/NotoSansRunic.ttf');
+}
+.rune {
+  font-family: frune;
+}
+rune {
+  font-family: frune;
+}
+@font-face {
+  font-family: 'fkorean';
+  src: url('../materialize/fonts/NotoSansKorean.otf');
+}
+.kor {
+  font-family: tkorean;
+}
+kor {
+  font-family: tkorean;
+}
+@font-face {
+  font-family: 'fchinese';
+  src: url('../materialize/fonts/NotoSansChinese.otf');
+}
+.chi {
+  font-family: fchinese;
+}
+chi {
+  font-family: fchinese;
+}
+@font-face {
+  font-family: 'fpho';
+  src: url('../materialize/fonts/NotoSansPhoenician.ttf');
+}
+.pho {
+  font-family: fpho;
+}
+pho {
+  font-family: fpho;
+}
+@font-face {
+  font-family: 'fcoptic';
+  src: url('../materialize/fonts/NotoSansCoptic.ttf');
+}
+.cop {
+  font-family: fcoptic;
+}
+cop {
+  font-family: fcoptic;
+}
+@font-face {
+  font-family: 'favestan';
+  src: url('../materialize/fonts/NotoSansAvestan.ttf');
+}
+.ave {
+  font-family: favestan;
+}
+ave {
+  font-family: favestan;
+}
+@font-face {
+  font-family: 'fgeorgian';
+  src: url('../materialize/fonts/NotoSansAvestan.ttf');
+}
+.geo {
+  font-family: fgeorgian;
+}
+geo {
+  font-family: fgeorgian;
+}
+@font-face {
+  font-family: 'fnabataean';
+  src: url('../materialize/fonts/NotoSansNabataean.ttf');
+}
+.nab {
+  font-family: fnabataean;
+}
+nab {
+  font-family: fnabataean;
+}
+
+@font-face {
+  font-family: 'fjapanese';
+  src: url('../materialize/fonts/NotoSansJapanese.otf');
+}
+.jap {
+  font-family: fjapanese;
+}
+jap {
+  font-family: fjapanese;
+}

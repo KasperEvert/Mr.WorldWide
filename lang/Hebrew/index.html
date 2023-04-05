@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mr. WorldWide Hebrew</title>
+    <link href="..\..\materialize\css\materialize.css" rel="stylesheet">
+    <link href="..\..\css\Master.css" rel="stylesheet">
+    <link href="..\..\css\Fonts.css" rel="stylesheet">
+    <link rel="icon" type="image/icon" href="https://KasperEvert.github.io/Mr.WorldWide/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="LANGNAME"><hebserf>עִברִית</hebserf> - Hebrew</div>
+    <script src="..\..\materialize\js\materialize.js"></script>
+    <script src="..\..\scripts\navbar.js"></script>
+    <header id="mainHead"></header>
+
+    <h1 class="mainTitle">Hebrew Alphabet<br>(<hebserf>אָלֶף - בֵּית עִברִית</hebserf> - Alef beit ivrit)</h1>
+    <div class="siteContent">
+      <h3 style="color: red;">!<hebserf>חָשׁוּב</hebserf> - Important!</h3>
+      <p>
+        This is a page about <u id="page_title">Modern Hebrew</u>,
+        Some of the names of the letters and some of the pronounciation
+        might have been diffrent at some point in time althought I'm not
+        sure if it's a big deal. Anyways, there is also a page for the
+        Yiddish alphabet which uses the Hebrew script:
+      </p>
+      <div class="collection" id="langOptions">
+        <a href="javascript:toModern()" id="collection_mod" class="collection-item active red lighten-1">Modern Hebrew</a>
+        <a href="javascript:toHand()" id="collection_hnd" class="collection-item active red lighten-1">Modern Hebrew (handwritten)</a>
+        <a href="javascript:toBiblical()" id="collection_bib" class="collection-item active red lighten-1">Biblical Hebrew</a>
+        <a href="https://KasperEvert.github.io/Mr.WorldWide/lang/Hebrew/yiddish.html" class="collection-item red-text text-lighten-1">Yiddish</a>
+        <a class="collection-item grey-text"> <br>Somewhat helpfull tools:<br><br> </a>
+        <a href="https://KasperEvert.github.io/Mr.WorldWide/lang/Hebrew/meanings.html" class="collection-item red-text text-lighten-1">Meanings of Hebrew Letters</a>
+        <a href="https://KasperEvert.github.io/Mr.WorldWide/games/semitic_transliteration_table.html" class="collection-item red-text text-lighten-1">Convert Between Semitic Scripts</a>
+        <a href="https://KasperEvert.github.io/Mr.WorldWide/games/semitize.html" class="collection-item red-text text-lighten-1">Tool for Making Text Look Semitic</a>
+      </div><br>
+        <h3>Is it a difficult script to learn?</h3>
+        <p>
+          The hebrew alphabet is sometimes treated as much harder than it actually is.
+          So depending on which sound you think the letter "<heb>י</heb> - Yod" that makes a
+          y/i/j sound which might at first sound quite difficult to know which to use, but in reality the J & Y both represent the
+          same sound, like the J in Julia, and so you could make it even easier to learn.
+        </p>
+        <p>
+          So in other words the character "Yod" makes either a y/i/e sound. "i" is similar to both so for most of the the
+          pronounciation will come naturally. So don't worry about the two to four almost identical or in some cases (like with j/y)
+          exactly identical sounds.
+        </p>
+        <div id="1kbtn_area"><a href="1000words.html" id="1kbtn" class="waves-effect waves-light btn red darken-1">Practice 1k most common words</a></div>
+        <h3>What does "Alef beit" mean?</h3>
+        <p>
+          So "Alef beit" is just the name of the first two letters of the alphabet. Just like our word in english "Alphabet" is just
+          the name of the first to letters of the Greek alphabet (which the roman one is based upon): Alpha Beta.
+        </p>
+        <h3><hebserf>האלף-בית</hebserf> - The alphabet</h3>
+        <table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Letter</th>
+              <th>Transliteration</th>
+              <th>IPA</th>
+              <th>Number value</th>
+              <th>Final</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Alef/Alif</td>
+            <td class="heb" id="alef"></td>
+            <td>A</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Glottal_stop" title="Glottal stop">ʔ</a>]</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Beit</td>
+            <td class="heb" id="beit">ב <hebserf>ב</hebserf></td>
+            <td>B/V</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive" title="Voiced bilabial plosive">b</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_labiodental_fricative" title="Voiced labiodental fricative">v</a>]</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Gimmel</td>
+            <td class="heb" id="gimmel">ג <hebserf>ג</hebserf></td>
+            <td>G</td>
+            <td id="gimmel_td">/ɡ/</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Daled</td>
+            <td class="heb" id="daled">ד <hebserf>ד</hebserf></td>
+            <td>D</td>
+            <td id="daled_td">/d/</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>He</td>
+            <td class="heb" id="he">ה <hebserf>ה</hebserf></td>
+            <td>H</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_glottal_fricative" title="Voiceless glottal fricative">h</a>]</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td id="vav_txt">Vav</td>
+            <td class="heb" id="vav">ו <hebserf>ו</hebserf></td>
+            <td id="vav_rom">V/Å/O/U</td>
+            <td id="vav_ipa">/u, o, v/</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Zign</td>
+            <td class="heb" id="zign">ז <hebserf>ז</hebserf></td>
+            <td>Z</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_alveolar_fricative#Voiced_alveolar_sibilant" title="Voiced alveolar sibilant">z</a>]</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Heth</td>
+            <td class="heb" id="heth">ח <hebserf>ח</hebserf></td>
+            <td>H/ch</td>
+            <td id="heth_td">/χ/</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>Teth</td>
+            <td class="heb" id="teth">ט <hebserf>ט</hebserf></td>
+            <td>T</td>
+            <td id="teth_td">/t/</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>Yod</td>
+            <td class="heb" id="yod">י <hebserf>י</hebserf></td>
+            <td>I/Y</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_palatal_approximant" title="Voiced palatal approximant">j</a>]</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Kaf</td>
+            <td class="heb" id="kaf">כ <hebserf>כ</hebserf></td>
+            <td>K/kh</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_velar_plosive" title="Voiceless velar plosive">k</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_uvular_fricative" title="Voiceless uvular fricative">χ</a>]</td>
+            <td>20</td>
+            <td id="kaf_final">ך <hebserf>ך</hebserf></td>
+          </tr>
+          <tr>
+            <td>Lamet/Lamed</td>
+            <td class="heb" id="lamet">ל <hebserf>ל</hebserf></td>
+            <td>L</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_lateral_approximants#Voiced_alveolar_lateral_approximant" title="Voiced alveolar lateral approximant">l</a>]</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>Mem</td>
+            <td class="heb" id="mem">מ <hebserf>מ</hebserf></td>
+            <td>M</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_bilabial_nasal" title="Voiced bilabial nasal">m</a>]</td>
+            <td>40</td>
+            <td id="mem_final">ם <hebserf>ם</hebserf></td>
+          </tr>
+          <tr>
+            <td>Nun</td>
+            <td class="heb" id="nun">נ <hebserf>נ</hebserf></td>
+            <td>N</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_nasals" title="Voiced dental, alveolar and postalveolar nasals">n</a>]</td>
+            <td>50</td>
+            <td id="nun_final">ן <hebserf>ן</hebserf></td>
+          </tr>
+          <tr>
+            <td>Samekh</td>
+            <td class="heb" id="samekh">ס <hebserf>ס</hebserf></td>
+            <td>S</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_alveolar_fricative#Voiceless_alveolar_sibilants" title="Voiceless alveolar sibilants">s</a>]</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>Ayin</td>
+            <td class="heb" id="ayin">ע <hebserf>ע</hebserf></td>
+            <td>o/i/a/e/g</td>
+            <td id="ayin_td">/ʔ/</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <td>Peh</td>
+            <td class="heb" id="peh">פ <hebserf>פ</hebserf></td>
+            <td>P/Ph</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_bilabial_plosive" title="Voiceless bilabial plosive">p</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_labiodental_fricative" title="Voiceless labiodental fricative">f</a>]</td>
+            <td>80</td>
+            <td id="peh_final">ף <hebserf>ף</hebserf></td>
+          </tr>
+          <tr>
+            <td>Sadi</td>
+            <td class="heb" id="sadi">צ <hebserf>צ</hebserf></td>
+            <td>Tz</td>
+            <td id="sadi_td">/t͡s/</td>
+            <td>90</td>
+            <td id="sadi_final">ץ <hebserf>ץ</hebserf></td>
+          </tr>
+          <tr>
+            <td>Qof</td>
+            <td class="heb" id="qof">ק <hebserf>ק</hebserf></td>
+            <td>Q</td>
+            <td id="qof_td">/k/</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>Resh</td>
+            <td class="heb" id="resh">ר <hebserf>ר</hebserf></td>
+            <td>R</td>
+            <td id="resh_td">/ʁ/</td>
+            <td>200</td>
+          </tr>
+          <tr>
+            <td>Shin</td>
+            <td class="heb" id="shin">ש <hebserf>ש</hebserf></td>
+            <td>Sh/š/s</td>
+            <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_postalveolar_fricative#Voiceless_palato-alveolar_fricative" title="Voiceless palato-alveolar fricative">ʃ</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_alveolar_fricative#Voiceless_alveolar_sibilants" title="Voiceless alveolar sibilants">s</a>]</td>
+            <td>300</td>
+          </tr>
+          <tr>
+            <td>Taw</td>
+            <td class="heb" id="taw">ת <hebserf>ת</hebserf></td>
+            <td>T</td>
+            <td id="taw_td">/t/</td>
+            <td>400</td>
+          </tr>
+        </tbody>
+      </table><br>
+      <h3>Niqqud (<hebserf>נִקּוּד‎</hebserf>) / vowels</h3>
+      <table>
+          <thead>
+              <th>Name</th>
+              <th>Long</th>
+              <th>Medium</th>
+              <th>Short</th>
+              <th>Sound</th>
+              <th>Example</th>
+              <th>Ex. Sound</th>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Pataḥ</td>
+                  <td class="heb">ָ </td>
+                  <td class="heb">ַ </td>
+                  <td class="heb">ֲ </td>
+                  <td id="niq_a">a, /ä/</td>
+                  <td class="heb">בַ</td>
+                  <td>Va</td>
+              </tr>
+              <tr>
+                  <td>Zeire</td>
+                  <td></td>
+                  <td class="heb">ֵ </td>
+                  <td></td>
+                  <td id="niq_e">e, /e̞/</td>
+                  <td class="heb">בֵ</td>
+                  <td>Ve</td>
+              </tr>
+              <tr>
+                  <td>Segol</td>
+                 <td class="heb">ֵ </td>
+                 <td class="heb">ֶ‎ </td>
+                 <td class="heb">ֱ‎ </td>
+                 <td id="niq_e2">e, /e̞/</td>
+                 <td class="heb">בֶ</td>
+                 <td>Ve</td>
+              </tr>
+              <tr>
+                  <td>Shva</td>
+                  <td class="heb"></td>
+                  <td class="heb">ְ ‎</td>
+                  <td class="heb"></td>
+                  <td id="niq_e3">ǝ/e, /e/</td>
+                  <td class="heb">בְ</td>
+                  <td>Vǝ</td>
+              </tr>
+              <tr>
+                  <td>Ḥiriq</td>
+                  <td class="heb">ִי</td>
+                  <td class="heb">ִ </td>
+                  <td class="heb"></td>
+                  <td id="niq_i">i, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_front_unrounded_vowel" title="Close front unrounded vowel">i</a>]</td>
+                  <td class="heb">בִ</td>
+                  <td>Vi</td>
+              </tr>
+
+              <tr>
+                  <td>Holam</td>
+                  <td class="heb">וֹ</td>
+                  <td class="heb">‎ָ </td>
+                  <td class="heb">ֳָ </td>
+                  <td id="niq_o">o, /o̞/</td>
+                  <td class="heb">‎בָ</td>
+                  <td>Vo</td>
+              </tr>
+              <tr>
+                  <td>Kubutz</td>
+                  <td class="heb"></td>
+                  <td class="heb">ֻ </td>
+                  <td class="heb"></td>
+                  <td id="niq_uk">u, /u/</td>
+                  <td class="heb">‎בֻ</td>
+                  <td>Voo (like l<b>oo</b>t)</td>
+              </tr>
+              <tr>
+                  <td>Shuruk</td>
+                  <td class="heb">וּ</td>
+                  <td class="heb"></td>
+                  <td class="heb"></td>
+                  <td id="niq_us">u, /u/</td>
+                  <td class="heb">בוּ‎</td>
+                  <td>Voo (like l<b>oo</b>t)</td>
+              </tr>
+          </tbody>
+      </table><br>
+
+      <h3>Marginal sounds (used in loan words, Modern Hebrew only)</h3>
+      <table>
+          <thead>
+              <th>Name</th>
+              <th>Letter</th>
+              <th>ROM</th>
+              <th>IPA</th>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Gimel with Geresh</td>
+                  <td class="heb">ג׳‎ </td>
+                  <td>ǧ or j</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_postalveolar_affricate" title="Voiced postalveolar affricate">d͡ʒ</a>]</td>
+              </tr>
+              <tr>
+                  <td>Nun-Gimel</td>
+                  <td class="heb">נג‎ </td>
+                  <td>ng</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_velar_nasal" title="Voiced velar nasal">ŋ</a>]</td>
+              </tr>
+              <tr>
+                  <td>Zayin with Geresh</td>
+                  <td class="heb">ז׳‎ </td>
+                  <td>ž</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_postalveolar_fricative#Voiced_palato-alveolar_fricative" title="Voiced palato-alveolar fricative">ʒ</a>]</td>
+              </tr>
+              <tr>
+                  <td>Ṣadi with Geresh</td>
+                  <td class="heb">צ׳ ץ׳‎</td>
+                  <td>č/ch</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_postalveolar_affricate" title="Voiceless postalveolar affricate">t͡ʃ</a>]</td>
+              </tr>
+              <tr>
+                  <td>Tav with Geresh</td>
+                  <td class="heb">ת׳‎</td>
+                  <td>th like <b>th</b>ing</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_dental_fricative" title="Voiceless dental fricative">θ</a>]</td>
+              </tr>
+              <tr>
+                  <td>Dalet with Geresh</td>
+                  <td class="heb">ד׳‎</td>
+                  <td>th like <b>th</b>e</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental_fricative" title="Voiced dental fricative">ð</a>]</td>
+              </tr>
+              <tr>
+                  <td>Double Vav</td>
+                  <td class="heb">וו‎</td>
+                  <td>w</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_labial–velar_approximant" title="Voiced labial–velar approximant">w</a>]</td>
+              </tr>
+          </tbody>
+      </table><br>
+      <h3>Learning the keyboard layout</h3>
+        <p style="text-align: left;">In case you need to learn the keyboard layout, <a href="https://en.wikipedia.org/wiki/Hebrew_keyboard">here</a> is a good picture: (Note that W and Q are not letters)
+        <a href="https://upload.wikimedia.org/wikipedia/en/thumb/0/0d/Hebrew_keyboard_layout.svg/640px-Hebrew_keyboard_layout.svg.png">
+          <img class="invert_on_nightmode" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0d/Hebrew_keyboard_layout.svg/640px-Hebrew_keyboard_layout.svg.png" alt="(There should be a picture here of the keyboard layout of a hebrew keyboard)">
+        </a>
+    </div>
+    <script type="text/javascript">
+      let active_classes = "collection-item active red lighten-1";
+      let inactive_classes = "collection-item red-text text-lighten-1";
+      function toModernIPA() {
+        document.getElementById("gimmel_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_velar_plosive" title="Voiced velar plosive">ɡ</a>]';
+        document.getElementById("daled_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental_and_alveolar_plosives" title="Voiced dental and alveolar plosives">d</a>]';
+        document.getElementById("heth_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_uvular_fricative" title="Voiceless uvular fricative">χ</a>]';
+        document.getElementById("teth_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_plosives" title="Voiceless dental and alveolar plosives">t</a>]';
+        document.getElementById("ayin_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Glottal_stop" title="Glottal stop">ʔ</a>]';
+        document.getElementById("sadi_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_alveolar_affricate#Voiceless_alveolar_sibilant_affricate" title="Voiceless alveolar sibilant affricate">t͡s</a>]';
+        document.getElementById("qof_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_velar_plosive" title="Voiceless velar plosive">k</a>]';
+        document.getElementById("resh_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_uvular_fricative" title="Voiced uvular fricative">ʁ</a>]';
+        document.getElementById("taw_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_plosives" title="Voiceless dental and alveolar plosives">t</a>]';
+        document.getElementById("niq_a").innerHTML = 'a, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Open_central_unrounded_vowel" title="Open central unrounded vowel">ä</a>]';
+        document.getElementById("niq_e").innerHTML = 'e, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Mid_front_unrounded_vowel" title="Mid front unrounded vowel">e̞</a>]';
+        document.getElementById("niq_e2").innerHTML = 'e, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Mid_front_unrounded_vowel" title="Mid front unrounded vowel">e̞</a>]';
+        document.getElementById("niq_e3").innerHTML = 'ǝ/e, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Mid_central_vowel" title="Mid central vowel">ə</a>]';
+        document.getElementById("niq_o").innerHTML = 'o, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Mid_back_rounded_vowel" title="Mid back rounded vowel">o̞</a>]';
+        document.getElementById("niq_uk").innerHTML = 'u, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_back_rounded_vowel" title="Close back rounded vowel">u</a>]';
+        document.getElementById("niq_us").innerHTML = 'u, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_back_rounded_vowel" title="Close back rounded vowel">u</a>]';
+        document.getElementById("vav_txt").innerHTML = 'Vav';
+        document.getElementById("vav_rom").innerHTML = "V/Å/O/U";
+        document.getElementById("vav_ipa").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_labiodental_fricative" title="Voiced labiodental fricative">v</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_back_rounded_vowel" title="Close back rounded vowel">u</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_back_rounded_vowel" title="Close-mid back rounded vowel">o</a>]';
+      }
+      function toModern() {
+        document.getElementById("collection_mod").className  = active_classes;
+        document.getElementById("collection_hnd").className  = inactive_classes;
+        document.getElementById("collection_bib").className  = inactive_classes;
+        document.getElementById("page_title").innerHTML = "Modern Hebrew";
+        toModernIPA();
+        toHandFont(false);
+      }
+      function toBiblicalIPA() {
+        document.getElementById("gimmel_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_velar_fricative" title="Voiced velar fricative">ɣ</a>]';
+        document.getElementById("daled_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental_fricative" title="Voiced dental fricative">ð</a>]';
+        document.getElementById("heth_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_pharyngeal_fricative" title="Voiceless pharyngeal fricative">ħ</a>]';
+        document.getElementById("teth_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_plosives" title="Voiceless dental and alveolar plosives">t</a><a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ˤ</a>]';
+        document.getElementById("ayin_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ʕ</a>]';
+        document.getElementById("sadi_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_alveolar_fricative#Voiceless_alveolar_sibilants" title="Voiceless alveolar sibilants">s</a><a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ˤ</a>]';
+        document.getElementById("qof_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_uvular_plosive" title="Voiceless uvular plosive">q</a>]';
+        document.getElementById("resh_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_trills#Voiced_alveolar_trill" title="Voiced alveolar trill">r</a>]';
+        document.getElementById("taw_td").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_dental_fricative" title="Voiceless dental fricative">θ</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_plosives" title="Voiceless dental and alveolar plosives">t</a>]';
+        document.getElementById("niq_a").innerHTML = 'a, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Near-open_central_vowel" title="Near-open central vowel">ɐ</a>]';
+        document.getElementById("niq_e").innerHTML = 'e, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_front_unrounded_vowel" title="Close-mid front unrounded vowel">eː</a>]';
+        document.getElementById("niq_e2").innerHTML = 'e, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Open-mid_front_unrounded_vowel" title="Open-mid front unrounded vowel">ɛ</a>]';
+        document.getElementById("niq_o").innerHTML = 'o, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_back_rounded_vowel" title="Close-mid back rounded vowel">oː</a>]';
+        document.getElementById("niq_uk").innerHTML = 'u, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Near-close_near-back_rounded_vowel" title="Near-close near-back rounded vowel">ʊ</a>]';
+        document.getElementById("niq_us").innerHTML = 'u, [<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_back_rounded_vowel" title="Close back rounded vowel">uː</a>]';
+        document.getElementById("vav_txt").innerHTML = "Waw";
+        document.getElementById("vav_rom").innerHTML = "W/Å/O/U";
+        document.getElementById("vav_ipa").innerHTML = '[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_labial–velar_approximant" title="Voiced labial–velar approximant">w</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_back_rounded_vowel" title="Close back rounded vowel">u</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_back_rounded_vowel" title="Close-mid back rounded vowel">o</a>]';
+      }
+      function toBiblical() {
+        document.getElementById("collection_mod").className  = inactive_classes;
+        document.getElementById("collection_hnd").className  = inactive_classes;
+        document.getElementById("collection_bib").className  = active_classes;
+        document.getElementById("page_title").innerHTML = "Biblical Hebrew";
+        toBiblicalIPA();
+        toHandFont(false);
+      }
+      function toHandFont(b) {
+        if (b) {
+          document.getElementById("alef").innerHTML = "<hebhand>א</hebhand>";
+          document.getElementById("beit").innerHTML = "<hebhand>ב</hebhand>";
+          document.getElementById("gimmel").innerHTML = "<hebhand>ג</hebhand>";
+          document.getElementById("daled").innerHTML = "<hebhand>ד</hebhand>";
+          document.getElementById("he").innerHTML = "<hebhand>ה</hebhand>";
+          document.getElementById("vav").innerHTML = "<hebhand>ו</hebhand>";
+          document.getElementById('zign').innerHTML = "<hebhand>ז</hebhand>";
+          document.getElementById('heth').innerHTML = "<hebhand>ח</hebhand>";
+          document.getElementById('teth').innerHTML = "<hebhand>ט</hebhand>";
+          document.getElementById('yod').innerHTML = "<hebhand>י</hebhand>";
+          document.getElementById('kaf').innerHTML = "<hebhand>כ</hebhand>";
+          document.getElementById('kaf_final').innerHTML = "<hebhand>ך</hebhand>";
+          document.getElementById('lamet').innerHTML = "<hebhand>ל</hebhand>";
+          document.getElementById('mem').innerHTML = "<hebhand>מ</hebhand>";
+          document.getElementById('mem_final').innerHTML = "<hebhand>ם</hebhand>";
+          document.getElementById('nun').innerHTML = "<hebhand>נ</hebhand>";
+          document.getElementById('nun_final').innerHTML = "<hebhand>ן</hebhand>";
+          document.getElementById('samekh').innerHTML = "<hebhand>ס</hebhand>";
+          document.getElementById('ayin').innerHTML = "<hebhand>ע</hebhand>";
+          document.getElementById('peh').innerHTML = "<hebhand>פ</hebhand>";
+          document.getElementById('peh_final').innerHTML = "<hebhand>ף</hebhand>";
+          document.getElementById('sadi').innerHTML = "<hebhand>צ</hebhand>";
+          document.getElementById('sadi_final').innerHTML = "<hebhand>ץ</hebhand>";
+          document.getElementById('qof').innerHTML = "<hebhand>ק</hebhand>";
+          document.getElementById('resh').innerHTML = "<hebhand>ר</hebhand>";
+          document.getElementById('shin').innerHTML = "<hebhand>ש</hebhand>";
+          document.getElementById('taw').innerHTML = "<hebhand>ת</hebhand>";
+        }
+        else {
+          document.getElementById("alef").innerHTML = "א <hebserf>א</hebserf>";
+          document.getElementById("beit").innerHTML = "ב <hebserf>ב</hebserf>";
+          document.getElementById("gimmel").innerHTML = "ג <hebserf>ג</hebserf>";
+          document.getElementById("daled").innerHTML = "ד <hebserf>ד</hebserf>";
+          document.getElementById("he").innerHTML = "ה <hebserf>ה</hebserf>";
+          document.getElementById("vav").innerHTML = "ו <hebserf>ו</hebserf>";
+          document.getElementById('zign').innerHTML = "ז <hebserf>ז</hebserf>";
+          document.getElementById('heth').innerHTML = "ח <hebserf>ח</hebserf>";
+          document.getElementById('teth').innerHTML = "ט <hebserf>ט</hebserf>";
+          document.getElementById('yod').innerHTML = "י <hebserf>י</hebserf>";
+          document.getElementById('kaf').innerHTML = "כ <hebserf>כ</hebserf>";
+          document.getElementById('kaf_final').innerHTML = "ך <hebserf>ך</hebserf>";
+          document.getElementById('lamet').innerHTML = "ל <hebserf>ל</hebserf>";
+          document.getElementById('mem').innerHTML = "מ <hebserf>מ</hebserf>";
+          document.getElementById('mem_final').innerHTML = "ם <hebserf>ם</hebserf>";
+          document.getElementById('nun').innerHTML = "נ <hebserf>נ</hebserf>";
+          document.getElementById('nun_final').innerHTML = "ן <hebserf>ן</hebserf>";
+          document.getElementById('samekh').innerHTML = "ס <hebserf>ס</hebserf>";
+          document.getElementById('ayin').innerHTML = "ע <hebserf>ע</hebserf>";
+          document.getElementById('peh').innerHTML = "פ <hebserf>פ</hebserf>";
+          document.getElementById('peh_final').innerHTML = "ף <hebserf>ף</hebserf>";
+          document.getElementById('sadi').innerHTML = "צ <hebserf>צ</hebserf>";
+          document.getElementById('sadi_final').innerHTML = "ץ <hebserf>ץ</hebserf>";
+          document.getElementById('qof').innerHTML = "ק <hebserf>ק</hebserf>";
+          document.getElementById('resh').innerHTML = "ר <hebserf>ר</hebserf>";
+          document.getElementById('shin').innerHTML = "ש <hebserf>ש</hebserf>";
+          document.getElementById('taw').innerHTML = "ת <hebserf>ת</hebserf>";
+        }
+      }
+      function toHand() {
+        document.getElementById("collection_mod").className  = inactive_classes;
+        document.getElementById("collection_hnd").className  = active_classes;
+        document.getElementById("collection_bib").className  = inactive_classes;
+        document.getElementById("page_title").innerHTML = "Modern Hebrew (with the alphabet table being with handwritten font)";
+        toModernIPA();
+        toHandFont(true);
+      }
+      document.addEventListener('DOMContentLoaded', toModern());
+    </script>
+    <div id="nightmode"></div>
+
+  </body>
+</html>

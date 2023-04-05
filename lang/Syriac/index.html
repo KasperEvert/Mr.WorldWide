@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mr. WorldWide Syriac</title>
+    <link href="..\..\materialize\css\materialize.css" rel="stylesheet">
+    <link href="..\..\css\Master.css" rel="stylesheet">
+    <link href="..\..\css\syriacFonts.css" rel="stylesheet">
+    <link rel="icon" type="image/icon" href="https://KasperEvert.github.io/Mr.WorldWide/favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="LANGNAME"><syr>ܣܘܪܝܝܐ</syr> - Syriac</div>
+    <script src="..\..\materialize\js\materialize.js"></script>
+    <script src="..\..\scripts\navbar.js"></script>
+    <header id="mainHead"></header>
+
+    <h1 class="mainTitle">Syriac Alphabet (<syr>ܐܳܠܰܦ ܒܶܝܬ ܣܘܪܝܝܐ</syr> - Alef beit Suryaya)</h1>
+    <div class="siteContent">
+
+      <h3 style="color: red;"><syr>!ܚܰܣܝܢܐ</syr> - Important!</h3>
+      <p>
+        This is a page about <u id="scriptName">Estrangela</u> Syriac script,
+        there are three types of Syriac writing, here is a list of them:
+      </p>
+      <div class="collection" id="langOptions">
+        <a href="javascript:toEstrangela()" id="collection_est" class="collection-item active red lighten-1">Esṭrangelā Script</a> <!-- ܐܣܛܪܢܓܠܐ -->
+        <a href="javascript:toSerto()" id="collection_ser" class="collection-item red-text text-lighten-1">Western Serṭā Script</a> <!-- ܣܪܛܐ -->
+        <a href="javascript:toEastern()" id="collection_eas" class="collection-item red-text text-lighten-1">Eastern Madnḥāyā Script</a> <!-- ܡܕܢܚܝܐ -->
+        <a class="collection-item grey-text"> <br>Somewhat helpfull tools:<br><br> </a>
+        <a href="https://KasperEvert.github.io/Mr.WorldWide/games/syriac_converter.html" class="collection-item red-text text-lighten-1">Tool for Conversion Between Scripts</a>
+        <a href="https://KasperEvert.github.io/Mr.WorldWide/games/semitic_transliteration_table.html" class="collection-item red-text text-lighten-1">Convert Between Semitic Scripts</a>
+        <a href="https://KasperEvert.github.io/Mr.WorldWide/games/semitize.html" class="collection-item red-text text-lighten-1">Tool for Making Text Look Semitic</a>
+      </div><br>
+        <h3>Is the Syriac alphabet hard to learn?</h3>
+        <p>
+          Probably not. I've left the Hebrew letter along with the roman one
+          down below to make it easier to learn for people who already know
+          at least the Hebrew alphabet. I imagine if you're trying to learn
+          Syriac you're probably a Jew or a Christian who already speaks a
+          little Hebrew. There might be some Arabic speakers who are reading
+          this, there is a version with arabic equivilant characters over at
+          the "<a href="https://KasperEvert.github.io/Mr.WorldWide/games/semitic_transliteration_table.html">semitic transliteration table</a>" page.
+          For those of you who don't know any semitic alphabet, it might be
+          a bit tricky to get the hang of things at first.
+        </p>
+        <h3>What does «<syr>ܐܠܦ ܒܝܬ</syr>» - Alef beit, mean?</h3>
+        <p>
+          So <syr>«ܐܠܦ ܒܝܬ»</syr> is just the name of the first two letters of the alphabet. Just like our word in english "Alphabet" is just
+          the name of the first to letters of the Greek alphabet (which the roman one is based upon): Alpha Beta.
+        </p>
+        <h3><syr></syr>The alphabet</h3>
+        <table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>ROM</th>
+              <th>IPA</th>
+
+              <th>Final</th>
+              <th>Medial</th>
+              <th>Initial</th>
+              <th>Isolated</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+          	<td><syr>ܐܠܦ</syr> - Āleph</td>
+          	<td>A א</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Glottal_stop" title="Glottal stop">ʔ</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Open_front_unrounded_vowel" title="Open front unrounded vowel">aː</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_front_unrounded_vowel" title="Close-mid front unrounded vowel">eː</a>]</td>
+
+          	<td class="syr ra">ـܐ</td>
+            <td></td>
+            <td class="syr ra">ܐ</td>
+            <td></td>
+          </tr>
+          <tr>
+          	<td><syr>ܒܝܬ</syr> - Bēth</td>
+          	<td>B/V ב</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive" title="Voiced bilabial plosive">b</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_bilabial_fricative" title="Voiced bilabial fricative">β</a>]</td>
+
+          	<td class="syr">ـܒ</td>
+          	<td class="syr">ـܒـ‎</td>
+          	<td class="syr">ܒـ‎</td>
+          	<td class="syr">ܒ</td>
+          </tr>
+          <tr>
+          	<td><syr>ܓܡܠ</syr> - Gāmal</td>
+          	<td>G ג</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_velar_plosive" title="Voiced velar plosive">ɡ</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_velar_fricative" title="Voiced velar fricative">ɣ</a>]</td>
+
+          	<td class="syr">ـܓ</td>
+          	<td class="syr">ـܓـ‎</td>
+          	<td class="syr">ܓـ‎</td>
+          	<td class="syr">ܓ</td>
+          </tr>
+          <tr>
+          	<td><syr>ܕܠܬ</syr> - Dālath</td>
+          	<td>D ד‎</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental_and_alveolar_plosives" title="Voiced dental and alveolar plosives">d</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental_fricative" title="Voiced dental fricative">ð</a>]</td>
+
+          	<td class="syr ra">ـܕ</td>
+            <td></td>
+          	<td class="syr ra">ܕ‎</td>
+            <td></td>
+          </tr>
+          <tr>
+          	<td><syr>ܗܐ</syr> - Hē</td>
+          	<td>H ה</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_glottal_fricative" title="Voiced glottal fricative">ɦ</a>]</td>
+
+          	<td class="syr ra">ـܗ</td>
+            <td></td>
+          	<td class="syr ra">ܗ‎</td>
+            <td></td>
+          </tr>
+          <tr>
+          	<td><syr>ܘܘ</syr> - Waw</td>
+          	<td>V/O/U/W ו</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_labial–velar_approximant" title="Voiced labial–velar approximant">w</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_back_rounded_vowel" title="Close-mid back rounded vowel">oː</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_back_rounded_vowel" title="Close back rounded vowel">uː</a>]</td>
+
+          	<td class="syr ra">ـܘ</td>
+            <td></td>
+          	<td class="syr ra">ܘ</td>
+            <td></td>
+          </tr>
+          <tr>
+          	<td><syr>ܙܝܢ</syr> - Zain</td>
+          	<td>Z ז</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_alveolar_fricative#Voiced_alveolar_sibilant" title="Voiced alveolar sibilant">z</a>]</td>
+
+          	<td class="syr ra">ـܙ</td>
+            <td></td>
+          	<td class="syr ra">ܙ‎</td>
+            <td></td>
+          </tr>
+          <tr>
+          	<td><syr>ܚܝܬ</syr> - Ḥēth</td>
+          	<td>Ch ח</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_epiglottal_trill" title="Voiceless epiglottal trill">ʜ</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_uvular_fricative" title="Voiceless uvular fricative">χ</a>]</td>
+
+
+          	<td class="syr">ـܚ</td>
+            <td class="syr">ـܚـ</td>
+          	<td class="syr">ܚـ‎</td>
+          	<td class="syr">ܚ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܛܝܬ</syr> - Ṭēth</td>
+          	<td>T ט</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_plosives" title="Voiceless dental and alveolar plosives">t</a><a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ˤ</a>]</td>
+
+          	<td class="syr">ـܛ</td>
+          	<td class="syr">ـܛـ‎</td>
+          	<td class="syr">ܛـ</td>
+          	<td class="syr">ܛ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܝܘܕ</syr> - Yod</td>
+          	<td>I/Y/E י</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_palatal_approximant" title="Voiced palatal approximant">j</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_front_unrounded_vowel" title="Close front unrounded vowel">iː</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_front_unrounded_vowel" title="Close-mid front unrounded vowel">eː</a>]</td>
+
+          	<td class="syr">ـܝ</td>
+            <td class="syr">ـܝـ‎</td>
+          	<td class="syr">ܝـ</td>
+          	<td class="syr">ܝ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܟܦ</syr> - Kāp</td>
+          	<td>K/Ch כ</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_velar_plosive" title="Voiceless velar plosive">k</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_uvular_fricative" title="Voiceless uvular fricative">χ</a>]</td>
+
+            <td class="syr">ـܟ‎</td>
+          	<td class="syr">ـܟـ</td>
+          	<td class="syr">ܟـ</td>
+          	<td class="syr">ܟ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܠܡܕ</syr> - Lāmadh</td>
+          	<td>L ל‎</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_lateral_approximants#Voiced_alveolar_lateral_approximant" title="Voiced alveolar lateral approximant">l</a>]</td>
+
+          	<td class="syr">ـܠ</td>
+          	<td class="syr">ـܠـ</td>
+          	<td class="syr">ܠـ‎</td>
+          	<td class="syr">ܠ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܡܝܡ</syr> - Mem</td>
+          	<td>M מ</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_bilabial_nasal" title="Voiced bilabial nasal">m</a>]</td>
+
+          	<td class="syr">ـܡ</td>
+          	<td class="syr">ـܡـ‎</td>
+          	<td class="syr">ܡـ‎</td>
+          	<td class="syr">ܡ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܢܘܢ</syr> - Nun</td>
+          	<td>N נ</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_nasals" title="Voiced dental, alveolar and postalveolar nasals">n</a>]</td>
+
+          	<td class="syr">ـܢ</td>
+          	<td class="syr">ـܢـ</td>
+          	<td class="syr">ܢـ‎</td>
+          	<td class="syr">ܢ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܣܡܟܬ</syr> - Semkath</td>
+          	<td>S ס</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_alveolar_fricative#Voiceless_alveolar_sibilants" title="Voiceless alveolar sibilants">s</a>]</td>
+
+          	<td class="syr">ـܣ</td>
+          	<td class="syr">ـܣـ‎</td>
+          	<td class="syr">ܣـ‎</td>
+          	<td class="syr">ܣ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܥܐ</syr> - ʿĒ</td>
+          	<td>O? ע</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_epiglottal_trill" title="Voiced epiglottal trill">ʢ</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_uvular_fricative" title="Voiced uvular fricative">ʁ</a>]</td>
+
+          	<td class="syr">ـܥ</td>
+          	<td class="syr">ـܥـ‎</td>
+          	<td class="syr">ܥـ‎</td>
+          	<td class="syr">ܥ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܦܐ</syr> - Pē</td>
+          	<td>Ph/p/f פ</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_bilabial_plosive" title="Voiceless bilabial plosive">p</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_bilabial_fricative" title="Voiceless bilabial fricative">ɸ</a>]</td>
+
+          	<td class="syr">ـܦ</td>
+          	<td class="syr">ـܦـ</td>
+          	<td class="syr">ܦـ‎</td>
+          	<td class="syr">ܦ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܨܕܐ</syr> - Ṣādhē</td>
+          	<td>Tz צ</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_alveolar_fricative#Voiceless_alveolar_sibilants" title="Voiceless alveolar sibilants">s</a><a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ˤ</a>]</td>
+
+          	<td class="syr ra">ـܨ</td>
+            <td></td>
+          	<td class="syr ra">ܨ‎</td>
+            <td></td>
+          </tr>
+          <tr>
+          	<td><syr>ܩܘܦ</syr> - Qop</td>
+          	<td>Q ק</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_uvular_plosive" title="Voiceless uvular plosive">q</a><a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_pharyngeal_fricative" title="Voiced pharyngeal fricative">ˤ</a>]</td>
+
+          	<td class="syr">ـܩ</td>
+          	<td class="syr">ـܩـ‎</td>
+          	<td class="syr">ܩـ‎</td>
+          	<td class="syr">ܩ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܪܝܫ</syr> - Rēsh</td>
+          	<td>R ר</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_trills#Voiced_alveolar_trill" title="Voiced alveolar trill">r</a>]</td>
+
+          	<td class="syr ra">ـܪ</td>
+            <td></td>
+          	<td class="syr ra">ܪ‎</td>
+            <td></td>
+          </tr>
+          <tr>
+          	<td><syr>ܫܝܢ</syr> - Shin</td>
+          	<td>Sh ש</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_postalveolar_fricative#Voiceless_palato-alveolar_fricative" title="Voiceless palato-alveolar fricative">ʃ</a>]</td>
+
+          	<td class="syr">ـܫ</td>
+          	<td class="syr">ـܫـ‎</td>
+          	<td class="syr">ܫـ‎</td>
+          	<td class="syr">ܫ‎</td>
+          </tr>
+          <tr>
+          	<td><syr>ܬܘ</syr> - Taw</td>
+          	<td>T/th ת</td>
+          	<td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_plosives" title="Voiceless dental and alveolar plosives">t</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiceless_dental_fricative" title="Voiceless dental fricative">θ</a>]</td>
+
+          	<td class="syr ra">ـܬ</td>
+            <td></td>
+          	<td class="syr ra">ܬ‎</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Vowels</h3>
+      <p>Note: Western vowels can be written above, below and a little bit everywhere.</p>
+      <table>
+          <thead>
+              <th>Western</th>
+              <th>Eastern</th>
+              <th>IPA</th>
+              <th>Example</th>
+              <th>Example IPA</th>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="syr">ܰ</td>
+                  <td class="syr">ܲ</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Open_front_unrounded_vowel" title="Open front unrounded vowel">a</a>]</td>
+                  <td class="syr">ܒܲ ܒܰ</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive" title="Voiced bilabial plosive">b</a><a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Open_front_unrounded_vowel" title="Open front unrounded vowel">a</a>]</td>
+              </tr>
+              <tr>
+                  <td class="syr">ܶ</td>
+                  <td class="syr">ܸ</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Open-mid_front_unrounded_vowel" title="Open-mid front unrounded vowel">ɛ</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Near-close_near-front_unrounded_vowel" title="Near-close near-front unrounded vowel">ɪ</a>, <a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_front_unrounded_vowel" title="Close-mid front unrounded vowel">e</a>]</td>
+                  <td class="syr">ܒ̤ ܒܶ</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive" title="Voiced bilabial plosive">b</a><a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_front_unrounded_vowel" title="Close-mid front unrounded vowel">e</a>]</td>
+              </tr>
+              <tr>
+                  <td class="syr">ܺ</td>
+                  <td class="syr">݈</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_front_unrounded_vowel" title="Close front unrounded vowel">i</a>]</td>
+                  <td class="syr">ܒ݈ ܒܺ</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive" title="Voiced bilabial plosive">b</a><a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_front_unrounded_vowel" title="Close front unrounded vowel">i</a>]</td>
+              </tr>
+              <tr>
+                  <td class="syr">ܳ</td>
+                  <td class="syr">̈</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_back_rounded_vowel" title="Close-mid back rounded vowel">o</a>]</td>
+                  <td class="syr">ܒ̈ ܒܳ</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive" title="Voiced bilabial plosive">b</a><a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close-mid_back_rounded_vowel" title="Close-mid back rounded vowel">o</a>]</td>
+              </tr>
+              <tr>
+                  <td class="syr">ܽ</td>
+                  <td class="syr">݇</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_back_rounded_vowel" title="Close back rounded vowel">u</a>]</td>
+                  <td class="syr">ܒ݇ ܒܽ</td>
+                  <td>[<a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Voiced_bilabial_plosive" title="Voiced bilabial plosive">b</a><a class="ipa" target="_blank" href="https://en.wikipedia.org/wiki/Close_back_rounded_vowel" title="Close back rounded vowel">u</a>]</td>
+              </tr>
+          </tbody>
+      </table><br>
+        <br>
+        <p>In case you need to learn the keyboard layout, <a href="../../pictures/Syriac_Keyboardlayout.png">here</a> is a good picture.
+        <a href="../../pictures/Syriac_Keyboardlayout.png">
+          <img src="../../pictures/Syriac_Keyboardlayout.png" alt="(There should be a picture here of the keyboard layout of a Syriac keyboard)">
+        </a>
+        </p>
+
+  </div>
+    <div id="altCss"></div>
+    <script type="text/javascript">
+      let active_classes = "collection-item active red lighten-1";
+      let inactive_classes = "collection-item red-text text-lighten-1";
+      function toEstrangela() {
+        document.getElementById("altCss").innerHTML = `<style media="screen">
+          syr {
+            font-family: Estrangela;
+          }
+          .syr {
+            font-family: Estrangela;
+          }
+        </style>`;
+        document.getElementById("collection_est").className  = active_classes;
+        document.getElementById("collection_ser").className  = inactive_classes;
+        document.getElementById("collection_eas").className  = inactive_classes;
+        document.getElementById("scriptName").innerHTML = "Estrangela";
+      }
+      function toSerto() {
+        document.getElementById("altCss").innerHTML = `<style media="screen">
+          syr {
+            font-family: Serto;
+          }
+          .syr {
+            font-family: Serto;
+          }
+        </style>`;
+        document.getElementById("collection_est").className  = inactive_classes;
+        document.getElementById("collection_ser").className  = active_classes;
+        document.getElementById("collection_eas").className  = inactive_classes;
+        document.getElementById("scriptName").innerHTML = "Serto";
+      }
+      function toEastern() {
+        document.getElementById("altCss").innerHTML = `<style media="screen">
+          syr {
+            font-family: Eastern;
+          }
+          .syr {
+            font-family: Eastern;
+          }
+        </style>`;
+        document.getElementById("collection_est").className  = inactive_classes;
+        document.getElementById("collection_ser").className  = inactive_classes;
+        document.getElementById("collection_eas").className  = active_classes;
+        document.getElementById("scriptName").innerHTML = "Eastern";
+      }
+      document.addEventListener('DOMContentLoaded', toEstrangela());
+    </script>
+    <div id="nightmode"></div>
+  </body>
+  <!--
+  https://www.aramaic.rocks/2012/06/syriac-vowels.html
+  https://omniglot.com/writing/syriac.htm
+  https://r12a.github.io/scripts/syriac/
+  -->
+</html>

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: Serto;
+  src: url(https://KasperEvert.github.io/Mr.WorldWide/materialize/fonts/NotoSansSyriac-Western.ttf);
+}
+@font-face {
+  font-family: Eastern;
+  src: url(https://KasperEvert.github.io/Mr.WorldWide/materialize/fonts/NotoSansSyriac-Eastern.ttf);
+}
+@font-face {
+  font-family: Estrangela;
+  src: url(https://KasperEvert.github.io/Mr.WorldWide/materialize/fonts/NotoSansSyriac-Estrangela.ttf);
+}

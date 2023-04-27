@@ -84,7 +84,7 @@ function nightmode() {
                 for (let i = 0; i < current.length; i++) { current[i] = current[i].trim() }
 
                 for (let i = 0; i < current.length; i++) {
-                    if (current[i].includes("sladetbask-kasper.github.io/Mr.WorldWide")) {
+                    if (current[i].includes("KasperEvert.github.io/Mr.WorldWide")) {
                         reconstructed += current[i].replaceAll('/" class="',
                             '/?darkmode=true" class="').replaceAll('.html" class="collection-',
                             '.html?darkmode=true" class="collection-') + "\n";

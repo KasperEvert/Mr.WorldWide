@@ -194,3 +194,14 @@ nab {
 jap {
   font-family: fjapanese;
 }
+
+@font-face {
+  font-family: 'fmandaic';
+  src: url('../materialize/fonts/NotoSansMandaic.ttf');
+}
+.mnc {
+  font-family: fmandaic;
+}
+mnc {
+  font-family: fmandaic;
+}

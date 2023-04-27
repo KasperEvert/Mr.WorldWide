@@ -16,6 +16,6 @@ This website was originally supposed to be an example of flexbox css
 on a website for a webdesign class I had to take. I put it on a deployment
 on github so my teacher could access it during COVID-19 lockdown. This
 initial design philosophy lead to some problems down the line. I think
-most of said problems are solved by now but it's still work mentioning.
+most of said problems are solved by now but it's still worth mentioning.
 
 This project is from my old GitHub.

@@ -1,6 +1,6 @@
 ///
 /// This is supposed to be a dictionary of the 1000 most common
-/// words in Jamtlandic but I don't know what words those are
+/// words in Jamtish but I don't know what words those are
 /// so here are four common word instead.
 ///
 let words = {

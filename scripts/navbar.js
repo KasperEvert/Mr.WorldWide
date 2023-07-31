@@ -23,6 +23,7 @@ const menu_items = [
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Czech/">Czech <emo>🇨🇿</emo></a>',
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Turkish/">Turkish <emo>🇹🇷</emo></a>',
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Sanskrit/">Sanskrit <emo>🇮🇳</emo></a>',
+'<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/PIE/">PIE <emo>🇷🇺</emo></a>',
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Avestan/">Avestan <emo>🇮🇷</emo></a>',
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Hungarian/">Hungarian <emo>🇭🇺</emo></a>',
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Polish/">Polish <emo>🇵🇱</emo></a>'];
@@ -49,6 +50,9 @@ function nightmode() {
         <style>
             body {
                 background-color: #212121;
+                color: white;
+            }
+            .hidden_link {
                 color: white;
             }
             .sidenav {

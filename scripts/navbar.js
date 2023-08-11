@@ -16,7 +16,7 @@ const menu_items = [
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Geez/">Ge\'ez <emo>🇪🇹🇪🇷</emo></a>',
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Nabataean/">Nabataean <emo>🇯🇴</emo></a>',
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Persian/">Persian <emo>🇹🇯🇮🇷🇦🇫</emo></a>',
-'<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Jamtish/">Jamtish <emo>🇳🇴🇸🇪</emo></a>',
+'<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Jamtish/">Jamtish <emo>🇱🇸</emo></a>',
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Japanese/">Japanese <emo>🇯🇵</emo></a>',
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Icelandic/">Icelandic <emo>🇮🇸</emo></a>',
 '<a class="waves-effect menu-item" href="https://KasperEvert.github.io/Mr.WorldWide/lang/Faroese/">Faroese <emo>🇫🇴</emo></a>',

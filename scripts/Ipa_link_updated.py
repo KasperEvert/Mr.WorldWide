@@ -30,7 +30,7 @@ ipa = {
 	"ɬ": "https://en.wikipedia.org/wiki/Voiceless_dental_and_alveolar_lateral_fricatives",
 	"ɬʼ": "https://en.wikipedia.org/wiki/Alveolar_lateral_ejective_fricative",
 	"t͡ɬʼ": "https://en.wikipedia.org/wiki/Alveolar_lateral_ejective_affricate",
-    "t͡ɬ": "https://en.wikipedia.org/wiki/Voiceless_alveolar_lateral_affricate",
+	"t͡ɬ": "https://en.wikipedia.org/wiki/Voiceless_alveolar_lateral_affricate",
 	"ɭ": "https://en.wikipedia.org/wiki/Voiced_retroflex_lateral_approximant",
 	"ɫ": "https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_lateral_approximants#Velarized_alveolar_lateral_approximant",
 	"k": "https://en.wikipedia.org/wiki/Voiceless_velar_plosive",
@@ -91,7 +91,7 @@ ipa = {
 	"r": "https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_trills#Voiced_alveolar_trill",
 	"r̥": "https://en.wikipedia.org/wiki/Voiceless_alveolar_trill",
 	"ɹ": "https://en.wikipedia.org/wiki/Voiced_alveolar_and_postalveolar_approximants",
-    "ɻ": "https://en.wikipedia.org/wiki/Voiced_retroflex_approximant",
+	"ɻ": "https://en.wikipedia.org/wiki/Voiced_retroflex_approximant",
 	"ʀ": "https://en.wikipedia.org/wiki/Voiced_uvular_trill",
 	"ʁ": "https://en.wikipedia.org/wiki/Voiced_uvular_fricative",
 	"ɡ": "https://en.wikipedia.org/wiki/Voiced_velar_plosive",
@@ -137,61 +137,47 @@ def urlToName(url):
 		elif "/wiki/" in url:
 			return url.split("/wiki/")[1].replace("_", " ")
 		else:
-			return "input error"
+			return "input error"# maybe i should throw an exception?
 def ipaToHtml(i, t=template):
 	if i == "/":
 		return ""
-	if i == "~" or i == " ":
-		return i
 	u = ipa[i.replace("ː", "").replace(".", "")]
 	return t.format(url=u, name=urlToName(u), char=i)
 def clearScreen():
-    if os.name == 'nt':
-        os.system("cls")
-    else:
-        os.system("clear")
-def getIPA(inp):
-	one_list = ["n̥", "t͡s", "d͡ʒ", "t͡ʃ", "d͡z", "t͡ɕ", "r̥", "t͡ʃʼ", "t͡ɬʼ","t͡ɬ", "d͡ʑ", "ʏ̫", "ʊ͍", "ɺ̣", "ɺ̠"]
-	rv = ""
-	if inp == "stop" or inp == "exit":
-		exit()
-	elif inp.strip() == "":
-		return rv
-	elif inp == "clexit" or inp == "cexit":
-		clearScreen()
-		exit()
-	elif inp == "cls" or inp == "clear":
-		clearScreen()
+	if os.name == 'nt':
+		os.system("cls")
 	else:
-		inp = inp.replace("g", "ɡ").replace("γ", "ɣ")
-		if len(inp) < 2 or inp in one_list :
-			rv += f"[{ipaToHtml(inp)}]"
-		elif len(inp) == 0:
-			return rv
-		else:
-			inp = inp.replace("/, /", ",").replace(", ", ",").replace("/ or /", ",")
-			items = []
-			for char in list(inp):
-				if char == "ː" or char == "." or char == "̥" or char == "̞" or char == "̝" or char == "ʼ":
-					items[len(items)-1] = items[len(items)-1]+char
-				else:
-					items.append(char)
-			rv += "["
-			i = 0
-			keepList = "ˈ~˧˥˨˩˦˥"
-			while i < len(items):
-				if i == len(items)-1:
-					rv += ipaToHtml(items[i])
-				elif items[i] == ",":
-					rv += ", "
-				elif items[i] in keepList:
-					rv += items[i]
-				else:
-					rv += ipaToHtml(items[i])
-				i+=1
-			rv += "]"
-	return rv
+		os.system("clear")
+def getIPA(inp):
+	inp = inp.replace("g", "ɡ").replace("γ", "ɣ")
+	x = 0
+	y = 3
+	validIpa = dict({})
+	rv = ""
+	while y >= 0:
+		while x < len(inp):
+			if inp[x:x+y] in ipa:
+				validIpa[str(inp[x:x+y])] = str(ipaToHtml(str(inp[x:x+y])))
+				rv += ipaToHtml(str(inp[x:x+y]))
+			else:
+				rv += inp[x:x+y]
+			x+=1
+			#y+=1
+		x = 0
+		y -= 1
+	return f"{rv}"
+
 if __name__ == "__main__":
 	while True:
 		inp = str(input("Enter IPA:"))
-		print(getIPA(inp))
+		if inp == "stop" or inp == "exit":
+			exit()
+		elif inp.strip() == "":
+			continue
+		elif inp == "clexit" or inp == "cexit":
+			clearScreen()
+			exit()
+		elif inp == "cls" or inp == "clear":
+			clearScreen()
+		else:
+			print(getIPA(inp))

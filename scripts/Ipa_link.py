@@ -67,6 +67,7 @@ ipa = {
 	"ɟ": "https://en.wikipedia.org/wiki/Voiced_palatal_plosive",
 	"r̝": "https://en.wikipedia.org/wiki/Voiced_dental,_alveolar_and_postalveolar_trills#Voiced_alveolar_fricative_trill",
 	"ɾ": "https://en.wikipedia.org/wiki/Voiced_dental_and_alveolar_taps_and_flaps#Voiced_alveolar_tap_and_flap",
+	"ɾ̥": "https://en.wikipedia.org/wiki/Voiceless_alveolar_tap_and_flap",
 	"ɽ": "https://en.wikipedia.org/wiki/Voiced_retroflex_flap",
 	"ɺ̣": "https://en.wikipedia.org/wiki/Voiced_retroflex_lateral_flap",
 	"ɺ̠": "https://en.wikipedia.org/wiki/Voiced_retroflex_lateral_flap",
